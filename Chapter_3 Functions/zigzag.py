@@ -1,7 +1,6 @@
 import time, sys
+
 #good example of using a boolean to accomplish a task cleanly
-
-
 def printSpacesStars(number):
     print(' ' * number, end = '')
     print('********')
@@ -26,7 +25,5 @@ while True:
 
             if indent <= 0:
                 indentIncreasing = True
-
-
     except KeyboardInterrupt:
         sys.exit()

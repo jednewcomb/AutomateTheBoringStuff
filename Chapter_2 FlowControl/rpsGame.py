@@ -1,16 +1,5 @@
 import random, sys
-
-print('ROCK, PAPER, SCISSORS')
-
-wins = 0
-losses = 0
-ties = 0
-
-while True:
-    print(str(wins) + ' Wins ' + str(losses) + ' Losses ' + str(ties) + ' Ties')
-    print('Enter your move: (r)ock, (p)aper, (s)cissors or (q)uit')
-    playerChoice = input()
-
+def printPlayerChoice(playerChoice):
     if playerChoice == 'q':
         sys.exit()
     elif playerChoice == 'r':
@@ -20,17 +9,30 @@ while True:
     else:
         print('SCISSORS versus...')
 
-    computerChoice = random.randint(0, 2)
-    
-    if computerChoice == 0:
-        computerChoice = str('r')
+def getComputerChoice(number):
+     if number == 0:
         print('ROCK')
-    elif computerChoice == 1:
-        computerChoice = str('p')
+        return 'r'
+     elif number == 1:
         print('PAPER')
-    else:
-        computerChoice = ('s')
+        return 'p'
+     else:
         print('SCISSORS')
+        return 's'
+        
+print('ROCK, PAPER, SCISSORS')
+
+wins = 0
+losses = 0
+ties = 0
+
+while True:
+    print('%s Wins, %s Losses,  %s Ties' % (wins, losses, ties))
+    print('Enter your move: (r)ock, (p)aper, (s)cissors or (q)uit')
+
+    playerChoice = input()
+    printPlayerChoice(playerChoice)
+    computerChoice = getComputerChoice(random.randint(0, 2))
 
     if playerChoice == computerChoice:
         print('It is a tie!')
