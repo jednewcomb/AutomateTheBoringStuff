@@ -1,0 +1,3 @@
+Raw Strings -  r'C:\Users\Al\Desktop' allows users to put escape chars in Strings
+
+
