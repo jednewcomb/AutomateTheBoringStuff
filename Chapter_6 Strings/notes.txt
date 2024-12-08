@@ -1,3 +1,70 @@
 Raw Strings -  r'C:\Users\Al\Desktop' allows users to put escape chars in Strings
 
 
+Python 3.6 introduced f-strings, which is similar to string interpolation except 
+that braces are used instead of %s, with the expressions placed directly inside 
+the braces. Like raw strings, f-strings have an f prefix before the starting 
+quotation mark. Enter the following into the interactive shell:
+
+name = 'Al'
+age = 4000
+f'My name is {name}. Next year I will be {age + 1}.'
+'My name is Al. Next year I will be 4001.'
+
+upper()
+lower()
+isupper() - means ENTIRE string is UPPER (entire and upper here would return true lol)
+islower() - samesies but lower (every string here would return true lol)
+
+isalpha() Returns True if the string consists only of letters and isn’t blank
+
+isalnum() Returns True if the string consists only of letters and numbers and is not blank
+
+isdecimal() Returns True if the string consists only of numeric characters and is not blank
+
+isspace() Returns True if the string consists only of spaces, tabs, and newlines and is not blank
+
+istitle() Returns True if the string consists only of words that begin with an uppercase letter followed by only lowercase letters
+
+The startswith() and endswith() methods return True if the string value they are called on begins or ends (respectively) 
+with the string passed to the method; otherwise, they return False.
+
+join() - called on a string, passed a List
+
+' '.join(['My', 'name', 'is', 'Simon'])
+'My name is Simon'
+'ABC'.join(['My', 'name', 'is', 'Simon'])
+
+split() - called on a string, returns List of strings
+
+'My name is Simon'.split()
+['My', 'name', 'is', 'Simon']
+
+partition() - This method searches the string it is called on for the separator string it is passed, 
+and returns a tuple of three substrings for the “before,” “separator,” and “after”
+If the separator string can’t be found, the first string returned in the tuple will be the entire string, 
+and the other two strings will be empty:
+
+rjust(), ljust(), and center() - pad strings for formatting (the book calls it "justification?" haven't heard that)
+the number passed to the methods will include the number of chars in the string
+>>> 'Hello'.rjust(10)
+'     Hello'
+>>> 'Hello'.rjust(20)
+'              Hello'
+>>> 'Hello, World'.rjust(20)
+'         Hello, World'
+>>> 'Hello'.ljust(10)
+'Hello     '
+
+>>> 'Hello'.rjust(20, '*')
+'***************Hello'
+>>> 'Hello'.ljust(20, '-')
+'Hello---------------'
+
+>>> 'Hello'.center(20)
+'       Hello        '
+>>> 'Hello'.center(20, '=')
+'=======Hello========'
+
+
+ord() and chr() get the code point of a one char string and vice versa
